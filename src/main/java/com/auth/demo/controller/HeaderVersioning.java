@@ -4,15 +4,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.auth.demo.versions.ApiVersions;
-
 @RestController
-@RequestMapping(ApiVersions.V1 + "/users")
-public class Users {
+@RequestMapping("/api/header-versioning")
+public class HeaderVersioning {
 	
-	@GetMapping
-	public String usersEndpoint() {
-		return "Hello from Users!";
+	@GetMapping(value="/demo",headers="X-API-VERSION=1")
+	public String headerVersioning() {
+		return "Header Versioning";
 	}
 
 }

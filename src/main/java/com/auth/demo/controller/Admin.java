@@ -10,7 +10,7 @@ import com.auth.demo.versions.ApiVersions;
 @RequestMapping(ApiVersions.V1 + "/admin")
 public class Admin {
 	
-//	@GetMapping
+	@GetMapping
 	public String adminEndpoint() {
 		return "Hello from Admin!";
 	}
